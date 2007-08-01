@@ -2,7 +2,7 @@
 
 %define name	basesystem
 %define version	2008.0
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -12,7 +12,7 @@ License:	GPL
 Group:		System/Base
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-Requires:	setup filesystem sed initscripts console-tools utempter
+Requires:	setup filesystem sed initscripts kbd utempter
 Requires:	chkconfig coreutils SysVinit crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip kernel less 
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
