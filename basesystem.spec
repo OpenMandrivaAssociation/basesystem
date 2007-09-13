@@ -2,7 +2,7 @@
 
 %define name	basesystem
 %define version	2008.0
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -17,10 +17,11 @@ Requires:	chkconfig coreutils SysVinit crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip kernel less 
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils 
-Requires:	stat sysklogd tar termcap time util-linux vim
+Requires:	stat tar termcap time util-linux vim
 Requires:	vixie-cron which perl-base common-licenses
 Requires:	ldconfig module-init-tools
 Requires:	mandriva-release >= 2008.0
+Requires:	syslog-daemon
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
