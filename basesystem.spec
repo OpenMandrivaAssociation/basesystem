@@ -10,7 +10,6 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		System/Base
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 Requires:	setup filesystem sed initscripts kbd utempter
 Requires:	chkconfig coreutils SysVinit crontabs dev
