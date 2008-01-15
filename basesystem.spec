@@ -2,7 +2,7 @@
 
 %define name	basesystem
 %define version	2008.0
-%define release	%mkrel 4
+%define release	%mkrel 5
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -11,10 +11,15 @@ Release:	%{release}
 License:	GPL
 Group:		System/Base
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Requires:	kernel basesystem-minimal
+
+%package minimal
+Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
+Group:		System/Base
 
 Requires:	setup filesystem sed initscripts kbd utempter
 Requires:	chkconfig coreutils SysVinit crontabs dev
-Requires:	e2fsprogs etcskel findutils grep gzip kernel less 
+Requires:	e2fsprogs etcskel findutils grep gzip less 
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils 
 Requires:	stat tar termcap time util-linux vim
@@ -46,4 +51,11 @@ example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
+%description minimal
+Basesystem defines the components of a basic Mandriva Linux system (for
+example, the package installation order to use during bootstrapping).
+Basesystem should be the first package installed on a system, and it
+should never be removed.
+
 %files
+%files minimal
