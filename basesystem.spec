@@ -2,7 +2,7 @@
 
 %define name	basesystem
 %define version	2008.0
-%define release	%mkrel 5
+%define release	%mkrel 6
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -12,6 +12,7 @@ License:	GPL
 Group:		System/Base
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	kernel basesystem-minimal
+Requires:	bootloader
 
 %package minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
@@ -30,7 +31,6 @@ Requires:	syslog-daemon
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
-Requires:	bootloader
 
 # MDK 9.0 requires a working libgcc
 # Note: gcc3.2 is the system compiler there
