@@ -25,7 +25,7 @@ Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils 
 Requires:	stat tar termcap time util-linux vim
 Requires:	vixie-cron which perl-base common-licenses
-Requires:	ldconfig module-init-tools
+Requires:	module-init-tools
 Requires:	mandriva-release >= 2008.0
 Requires:	syslog-daemon
 
