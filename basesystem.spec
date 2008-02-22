@@ -19,7 +19,7 @@ Summary:	The skeleton package which defines a simple Mandriva Linux system for c
 Group:		System/Base
 
 Requires:	setup filesystem sed initscripts kbd utempter
-Requires:	chkconfig coreutils SysVinit crontabs dev
+Requires:	chkconfig coreutils sysvinit crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip less 
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils 
