@@ -1,8 +1,8 @@
 #rh-7.0-2
 
 %define name	basesystem
-%define version	2008.0
-%define release	%mkrel 7
+%define version	2008.1
+%define release	%mkrel 1
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -26,7 +26,7 @@ Requires:	psmisc rootfiles rpm sash shadow-utils
 Requires:	stat tar termcap time util-linux vim
 Requires:	vixie-cron which perl-base common-licenses
 Requires:	module-init-tools
-Requires:	mandriva-release >= 2008.0
+Requires:	mandriva-release >= 2008.1
 Requires:	syslog-daemon
 
 # (gb) Add timezone database here for now before moving it to DrakX
