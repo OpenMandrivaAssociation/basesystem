@@ -2,7 +2,7 @@
 
 %define name	basesystem
 %define version	2009.0
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -13,6 +13,14 @@ Group:		System/Base
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	kernel basesystem-minimal
 Requires:	bootloader
+# (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
+%ifarch ppc
+Requires:	pdisk hfsutils ybin mktemp mkinitrd pmac-utils
+%endif
+# (fg) 20001027 ia64 uses eli as a bootloader
+%ifarch ia64
+Requires:	mkinitrd
+%endif
 
 %package minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
@@ -36,14 +44,12 @@ Requires:	timezone
 # Note: gcc3.2 is the system compiler there
 Requires:	libgcc >= 3.2-1mdk
 
-# (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
-%ifarch ppc
-Requires:	pdisk hfsutils ybin mktemp mkinitrd pmac-utils
-%endif
-# (fg) 20001027 ia64 uses eli as a bootloader
-%ifarch ia64
-Requires:	mkinitrd
-%endif
+%package uml
+Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
+Group:		System/Base
+Requires:	basesystem-minimal
+Requires:	dhcp-client
+Requires:   urpmi
 
 %description
 Basesystem defines the components of a basic Mandriva Linux system (for
@@ -57,5 +63,15 @@ example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
+%description uml
+Basesystem defines the components of a basic Mandriva Linux system (for
+example, the package installation order to use during bootstrapping).
+Basesystem should be the first package installed on a system, and it
+should never be removed.
+
+This package can be used to setup a full and working system runned with
+kernel-uml, using urpmi %{name}-uml  --root ...
+
 %files
 %files minimal
+%files uml
