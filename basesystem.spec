@@ -2,7 +2,7 @@
 
 %define name	basesystem
 %define version	2009.0
-%define release	%mkrel 4
+%define release	%mkrel 5
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
