@@ -12,7 +12,9 @@ License:	GPL
 Group:		System/Base
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	kernel basesystem-minimal
+%ifnarch %mips
 Requires:	bootloader
+%endif
 # (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
 %ifarch ppc
 Requires:	pdisk hfsutils ybin mktemp mkinitrd pmac-utils
