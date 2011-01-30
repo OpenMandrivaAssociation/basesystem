@@ -38,6 +38,7 @@ Requires:	vixie-cron which perl-base common-licenses
 Requires:	module-init-tools
 Requires:	mandriva-release >= 2008.1
 Requires:	syslog-daemon
+Requires:	bzip2 xz
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
