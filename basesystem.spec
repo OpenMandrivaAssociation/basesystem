@@ -1,8 +1,10 @@
 #rh-7.0-2
 
+%define with_systemd 1
+
 %define name	basesystem
 %define version	2011.0
-%define release	%mkrel 1 
+%define release	%mkrel 1
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -29,16 +31,21 @@ Summary:	The skeleton package which defines a simple Mandriva Linux system for c
 Group:		System/Base
 
 Requires:	setup filesystem sed initscripts kbd utempter
-Requires:	chkconfig coreutils sysvinit crontabs dev
-Requires:	e2fsprogs etcskel findutils grep gzip less 
+Requires:	chkconfig coreutils crontabs dev
+Requires:	e2fsprogs etcskel findutils grep gzip less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
-Requires:	psmisc rootfiles rpm sash shadow-utils 
+Requires:	psmisc rootfiles rpm sash shadow-utils
 Requires:	stat tar termcap time util-linux vim
 Requires:	vixie-cron which perl-base common-licenses
 Requires:	module-init-tools
 Requires:	mandriva-release >= 2008.1
 Requires:	syslog-daemon
 Requires:	bzip2 xz
+%if %{with_systemd}
+Requires:	systemd-sysvinit
+%else
+Requires:	sysvinit
+%endif
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
@@ -52,7 +59,7 @@ Summary:	The skeleton package which defines a simple Mandriva Linux system to be
 Group:		System/Base
 Requires:	basesystem-minimal
 Requires:	dhcp-client
-Requires:   urpmi
+Requires:	urpmi
 
 %description
 Basesystem defines the components of a basic Mandriva Linux system (for
