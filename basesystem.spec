@@ -4,7 +4,7 @@
 
 %define name	basesystem
 %define version	2011.0
-%define release	%mkrel 3
+%define release	%mkrel 4
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -43,6 +43,7 @@ Requires:	syslog-daemon
 Requires:	bzip2 xz
 %if %{with_systemd}
 Requires(post):	systemd-sysvinit
+Conflicts:	sysvinit
 %else
 Requires(post):	sysvinit
 %endif
