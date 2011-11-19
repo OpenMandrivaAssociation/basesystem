@@ -4,7 +4,7 @@
 
 %define name	basesystem
 %define version	2011.0
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -42,9 +42,9 @@ Requires:	mandriva-release >= 2008.1
 Requires:	syslog-daemon
 Requires:	bzip2 xz
 %if %{with_systemd}
-Requires:	systemd-sysvinit
+Requires(post):	systemd-sysvinit
 %else
-Requires:	sysvinit
+Requires(post):	sysvinit
 %endif
 
 # (gb) Add timezone database here for now before moving it to DrakX
