@@ -4,7 +4,7 @@
 
 %define name	basesystem
 %define version	2011.0
-%define release	%mkrel 4
+%define release	5
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -50,10 +50,6 @@ Requires(post):	sysvinit
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
-
-# MDK 9.0 requires a working libgcc
-# Note: gcc3.2 is the system compiler there
-Requires:	libgcc >= 3.2-1mdk
 
 %package uml
 Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
