@@ -4,7 +4,7 @@
 
 %define name	basesystem
 %define version	2011.0
-%define release	6
+%define release	7
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		%{name}
@@ -12,7 +12,6 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		System/Base
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	kernel basesystem-minimal
 %ifnarch %mips
 Requires:	bootloader
@@ -32,7 +31,7 @@ Group:		System/Base
 
 Requires:	setup filesystem sed initscripts kbd utempter
 Requires:	chkconfig coreutils crontabs dev
-Requires:	e2fsprogs etcskel findutils grep gzip less
+Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils
 Requires:	stat tar termcap time util-linux vim
