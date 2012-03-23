@@ -2,18 +2,14 @@
 
 %define with_systemd 1
 
-%define name	basesystem
-%define version	2011.0
-%define release	7
-
 Summary:	The skeleton package which defines a simple Mandriva Linux system
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL
+Name:		basesystem
+Version:	2011
+Release:	8
+License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
-%ifnarch %mips
+%ifnarch %{mips}
 Requires:	bootloader
 %endif
 # (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
@@ -25,7 +21,7 @@ Requires:	pdisk hfsutils ybin mktemp mkinitrd pmac-utils
 Requires:	mkinitrd
 %endif
 
-%package minimal
+%package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
 Group:		System/Base
 
@@ -49,7 +45,7 @@ Requires(post):	sysvinit
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
 
-%package uml
+%package	uml
 Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
 Group:		System/Base
 Requires:	basesystem-minimal
