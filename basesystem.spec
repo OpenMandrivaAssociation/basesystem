@@ -4,8 +4,8 @@
 
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
-Version:	2011
-Release:	8
+Version:	2012
+Release:	1
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
