@@ -18,7 +18,7 @@ Requires:	pdisk hfsutils ybin mktemp mkinitrd pmac-utils
 %endif
 # (fg) 20001027 ia64 uses eli as a bootloader
 %ifarch ia64
-Requires:	mkinitrd
+Requires:	mkinitrd-command
 %endif
 
 %package	minimal
