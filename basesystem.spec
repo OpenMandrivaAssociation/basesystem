@@ -5,7 +5,7 @@
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
 Version:	2012
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
@@ -44,6 +44,7 @@ Requires(post):	sysvinit
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
+Suggests:	prelink
 
 %package	uml
 Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
