@@ -50,7 +50,7 @@ Suggests:	prelink
 Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
 Group:		System/Base
 Requires:	basesystem-minimal
-Requires:	dhcp-client
+Requires:	dhcp-client-daemon
 Requires:	urpmi
 
 %description
