@@ -5,7 +5,7 @@
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
 Version:	2012
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
@@ -25,7 +25,7 @@ Requires:	mkinitrd-command
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
 Group:		System/Base
 
-Requires:	setup filesystem sed initscripts kbd utempter
+Requires:	setup filesystem sed kbd utempter
 Requires:	chkconfig coreutils crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
@@ -40,6 +40,7 @@ Requires:	bzip2 xz
 Requires(post):	systemd-sysvinit
 %else
 Requires(post):	sysvinit
+Requires:	initscripts
 %endif
 
 # (gb) Add timezone database here for now before moving it to DrakX
