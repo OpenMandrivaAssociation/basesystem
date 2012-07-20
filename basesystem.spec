@@ -5,7 +5,7 @@
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
 Version:	2012
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
@@ -32,7 +32,11 @@ Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils
 Requires:	stat tar termcap time util-linux vim
 Requires:	vixie-cron which perl-base common-licenses
+%if %mdvver < 201200
 Requires:	module-init-tools
+%else
+Requires:	kmod
+%endif
 Requires:	mandriva-release >= 2008.1
 Requires:	syslog-daemon
 Requires:	bzip2 xz
