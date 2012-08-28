@@ -28,6 +28,7 @@ Requires:	kmod
 Suggests:	prelink
 Requires:	vixie-cron
 Requires:	common-licenses
+Requires:	syslog-daemon
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
@@ -42,7 +43,6 @@ Requires:	stat tar termcap time util-linux
 Suggests:	vim
 Requires:	which perl-base
 Requires:	mandriva-release >= 2008.1
-Requires:	syslog-daemon
 Requires:	bzip2 xz
 %if %{with_systemd}
 Requires(post):	systemd-sysvinit
