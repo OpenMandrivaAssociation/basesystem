@@ -25,6 +25,7 @@ Requires:	module-init-tools
 %else
 Requires:	kmod
 %endif
+Suggests:	prelink
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
@@ -50,7 +51,6 @@ Requires:	initscripts
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
-Suggests:	prelink
 
 %package	uml
 Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
