@@ -27,7 +27,7 @@ Requires:	kmod
 %endif
 Suggests:	prelink
 Requires:	vixie-cron
-common-licenses
+Requires:	common-licenses
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
