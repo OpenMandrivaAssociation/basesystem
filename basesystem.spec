@@ -36,6 +36,7 @@ Requires(post):	sysvinit
 Requires:	initscripts
 %endif
 Requires:	kbd 
+Requires:	crontabs 
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
