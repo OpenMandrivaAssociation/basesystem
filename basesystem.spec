@@ -41,7 +41,7 @@ Provides:	e2fsprogs
 
 %package	minimal
 Requires:	setup filesystem sed utempter
-Requires:	chkconfig coreutils crontabs dev
+Requires:	chkconfig coreutils dev
 Requires:	etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm shadow-utils
