@@ -37,7 +37,7 @@ Requires:	setup filesystem sed kbd utempter
 Requires:	chkconfig coreutils crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
-Requires:	psmisc rootfiles rpm sash shadow-utils
+Requires:	psmisc rootfiles rpm shadow-utils
 Requires:	stat tar termcap time util-linux
 Suggests:	vim
 Requires:	which perl-base
