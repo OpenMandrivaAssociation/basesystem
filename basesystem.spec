@@ -26,6 +26,7 @@ Requires:	module-init-tools
 Requires:	kmod
 %endif
 Suggests:	prelink
+Requires:	vixie-cron
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
@@ -38,7 +39,7 @@ Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils
 Requires:	stat tar termcap time util-linux
 Suggests:	vim
-Requires:	vixie-cron which perl-base common-licenses
+Requires:	which perl-base common-licenses
 Requires:	mandriva-release >= 2008.1
 Requires:	syslog-daemon
 Requires:	bzip2 xz
