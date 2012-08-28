@@ -37,8 +37,8 @@ Requires:	initscripts
 %endif
 Requires:	kbd 
 Requires:	crontabs 
-Provides:	e2fsprogs
-Provides:	logrotate 
+Requires:	e2fsprogs
+Requires:	logrotate 
 
 %package	minimal
 Requires:	setup filesystem sed utempter
