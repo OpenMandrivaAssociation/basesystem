@@ -5,7 +5,7 @@
 Summary:	The skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
 Version:	2012
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
@@ -29,6 +29,12 @@ Suggests:	prelink
 Requires:	vixie-cron
 Requires:	common-licenses
 Requires:	syslog-daemon
+%if %{with_systemd}
+Requires(post):	systemd-sysvinit
+%else
+Requires(post):	sysvinit
+Requires:	initscripts
+%endif
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
@@ -44,12 +50,6 @@ Suggests:	vim
 Requires:	which perl-base
 Requires:	mandriva-release >= 2008.1
 Requires:	bzip2 xz
-%if %{with_systemd}
-Requires(post):	systemd-sysvinit
-%else
-Requires(post):	sysvinit
-Requires:	initscripts
-%endif
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
