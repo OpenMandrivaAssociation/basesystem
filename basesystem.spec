@@ -37,11 +37,12 @@ Requires:	initscripts
 %endif
 Requires:	kbd 
 Requires:	crontabs 
+Provides:	e2fsprogs
 
 %package	minimal
 Requires:	setup filesystem sed utempter
 Requires:	chkconfig coreutils crontabs dev
-Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
+Requires:	etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm shadow-utils
 Requires:	stat tar termcap time util-linux
