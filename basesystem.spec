@@ -38,12 +38,13 @@ Requires:	initscripts
 Requires:	kbd 
 Requires:	crontabs 
 Provides:	e2fsprogs
+Provides:	logrotate 
 
 %package	minimal
 Requires:	setup filesystem sed utempter
 Requires:	chkconfig coreutils dev
 Requires:	etcskel findutils grep gzip gzip-utils less
-Requires:	logrotate losetup mingetty mount net-tools passwd procps
+Requires:	losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm shadow-utils
 Requires:	stat tar termcap time util-linux
 Suggests:	vim
