@@ -2,7 +2,7 @@
 
 %define with_systemd 1
 
-Summary:	The skeleton package which defines a simple Mandriva Linux system
+Summary:	Skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
 Version:	2012
 Release:	5
@@ -39,9 +39,6 @@ Requires:	kbd
 Requires:	crontabs 
 
 %package	minimal
-Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
-Group:		System/Base
-
 Requires:	setup filesystem sed utempter
 Requires:	chkconfig coreutils crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
@@ -57,8 +54,6 @@ Requires:	bzip2 xz
 Requires:	timezone
 
 %package	uml
-Summary:	The skeleton package which defines a simple Mandriva Linux system to be run under UML
-Group:		System/Base
 Requires:	basesystem-minimal
 Requires:	dhcp-client-daemon
 Requires:	urpmi
