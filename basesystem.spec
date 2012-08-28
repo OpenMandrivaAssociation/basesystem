@@ -30,7 +30,8 @@ Requires:	chkconfig coreutils crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm sash shadow-utils
-Requires:	stat tar termcap time util-linux vim
+Requires:	stat tar termcap time util-linux
+Suggests:	vim
 Requires:	vixie-cron which perl-base common-licenses
 %if %mdvver < 201200
 Requires:	module-init-tools
