@@ -35,12 +35,13 @@ Requires(post):	systemd-sysvinit
 Requires(post):	sysvinit
 Requires:	initscripts
 %endif
+Requires:	kbd 
 
 %package	minimal
 Summary:	The skeleton package which defines a simple Mandriva Linux system for chroot systems
 Group:		System/Base
 
-Requires:	setup filesystem sed kbd utempter
+Requires:	setup filesystem sed utempter
 Requires:	chkconfig coreutils crontabs dev
 Requires:	e2fsprogs etcskel findutils grep gzip gzip-utils less
 Requires:	logrotate losetup mingetty mount net-tools passwd procps
