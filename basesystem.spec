@@ -42,7 +42,7 @@ Requires:	logrotate
 
 %package	minimal
 Requires:	setup filesystem sed utempter
-Requires:	chkconfig coreutils dev
+Requires:	chkconfig coreutils
 Requires:	etcskel findutils grep gzip gzip-utils less
 Requires:	losetup mingetty mount net-tools passwd procps
 Requires:	psmisc rootfiles rpm shadow-utils
