@@ -1,11 +1,9 @@
-#rh-7.0-2
-
 %define with_systemd 1
 
 Summary:	Skeleton package which defines a simple Mandriva Linux system
 Name:		basesystem
 Version:	2012
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel basesystem-minimal
