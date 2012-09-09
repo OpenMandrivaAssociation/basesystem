@@ -1,6 +1,6 @@
 %define with_systemd 1
 
-Summary:	Skeleton package which defines a simple Mandriva Linux system
+Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2012
 Release:	6
@@ -40,12 +40,13 @@ Requires:	logrotate
 Conflicts:	makedev <= 4.4-15
 
 %description
-Basesystem defines the components of a basic Mandriva Linux system (for
+Basesystem defines the components of a basic %{distribution} system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
 %package	minimal
+Summary:	Minimalistic skeleton package definining a simple %{distribution} system
 Requires:	setup filesystem sed utempter
 Requires:	chkconfig coreutils
 Requires:	etcskel findutils grep gzip gzip-utils less
@@ -61,18 +62,19 @@ Requires:	bzip2 xz
 Requires:	timezone
 
 %description	minimal
-Basesystem defines the components of a basic Mandriva Linux system (for
+Basesystem defines the components of a basic %{distribution} system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
 %package	uml
+Summary:	Skeleton package definining a simple uml %{distribution} system
 Requires:	basesystem-minimal
 Requires:	dhcp-client-daemon
 Requires:	urpmi
 
 %description	uml
-Basesystem defines the components of a basic Mandriva Linux system (for
+Basesystem defines the components of a basic %{distribution} system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
