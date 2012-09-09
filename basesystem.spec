@@ -41,6 +41,12 @@ Requires:	e2fsprogs
 Requires:	logrotate 
 Conflicts:	makedev <= 4.4-15
 
+%description
+Basesystem defines the components of a basic Mandriva Linux system (for
+example, the package installation order to use during bootstrapping).
+Basesystem should be the first package installed on a system, and it
+should never be removed.
+
 %package	minimal
 Requires:	setup filesystem sed utempter
 Requires:	chkconfig coreutils
@@ -56,24 +62,18 @@ Requires:	bzip2 xz
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
 
+%description	minimal
+Basesystem defines the components of a basic Mandriva Linux system (for
+example, the package installation order to use during bootstrapping).
+Basesystem should be the first package installed on a system, and it
+should never be removed.
+
 %package	uml
 Requires:	basesystem-minimal
 Requires:	dhcp-client-daemon
 Requires:	urpmi
 
-%description
-Basesystem defines the components of a basic Mandriva Linux system (for
-example, the package installation order to use during bootstrapping).
-Basesystem should be the first package installed on a system, and it
-should never be removed.
-
-%description minimal
-Basesystem defines the components of a basic Mandriva Linux system (for
-example, the package installation order to use during bootstrapping).
-Basesystem should be the first package installed on a system, and it
-should never be removed.
-
-%description uml
+%description	uml
 Basesystem defines the components of a basic Mandriva Linux system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
@@ -83,5 +83,5 @@ This package can be used to setup a full and working system runned with
 kernel-uml, using urpmi %{name}-uml  --root ...
 
 %files
-%files minimal
-%files uml
+%files		minimal
+%files		uml
