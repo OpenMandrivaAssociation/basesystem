@@ -39,6 +39,7 @@ Requires:	kbd
 Requires:	crontabs 
 Requires:	e2fsprogs
 Requires:	logrotate 
+Conflicts:	makedev <= 4.4-15
 
 %package	minimal
 Requires:	setup filesystem sed utempter
