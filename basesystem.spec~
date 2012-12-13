@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	3
+Release:	2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -81,6 +81,8 @@ Requires:	util-linux
 Requires:	which
 Requires:	perl-base
 Requires:	mandriva-release >= 2013.0
+# workaround to deal with upgrades to distro built on ABF
+Conflicts:	rosa-release rosa-release-common
 Requires:	bzip2
 Requires:	xz
 Suggests:	vim
@@ -114,10 +116,6 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 %files uml
 
 %changelog
-* Thu Dec 13 2012 Bernhard Rosenkränzer <bero@bero.eu> 2013-3
-- Remove rosa-release-common conflict because mandriva-release-common
-  provides it
-
 * Wed Dec 12 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-1
 - add conflict on rosa-release-common to workaround unversioned obsoletes
   creating issues when upgrading from cooker
