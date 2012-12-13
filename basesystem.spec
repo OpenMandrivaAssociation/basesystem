@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -80,7 +80,7 @@ Requires:	time
 Requires:	util-linux
 Requires:	which
 Requires:	perl-base
-Requires:	mandriva-release >= 2008.1
+Requires:	mandriva-release >= 2013.0
 # workaround to deal with upgrades to distro built on ABF
 Conflicts:	rosa-release rosa-release-common
 Requires:	bzip2
