@@ -2,8 +2,8 @@
 
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
-Version:	2012
-Release:	7
+Version:	2013
+Release:	1
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -81,6 +81,8 @@ Requires:	util-linux
 Requires:	which
 Requires:	perl-base
 Requires:	mandriva-release >= 2008.1
+# workaround to deal with upgrades to distro built on ABF
+Conflicts:	rosa-release rosa-release-common
 Requires:	bzip2
 Requires:	xz
 Suggests:	vim
@@ -115,7 +117,8 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 
 %changelog
 * Wed Dec 12 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-1
-- rebuild on ABF
+- add conflict on rosa-release-common to workaround unversioned obsoletes
+  creating issues when upgrading from cooker
 
 * Tue Sep 11 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2012-7
 + Revision: 816758
