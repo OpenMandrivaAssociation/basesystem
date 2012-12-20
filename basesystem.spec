@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -68,7 +68,11 @@ Requires:	less
 Requires:	mingetty
 Requires:	net-tools
 Requires:	passwd
+%if %mdvver >= 201300
+Requires:	procps-ng
+%else
 Requires:	procps
+%endif
 Requires:	psmisc
 Requires:	rootfiles
 Requires:	rpm
