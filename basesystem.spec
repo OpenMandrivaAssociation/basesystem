@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	4
+Release:	6
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -29,7 +29,6 @@ Requires:	module-init-tools
 %else
 Requires:	kmod
 %endif
-Suggests:	prelink
 Requires:	vixie-cron
 Requires:	common-licenses
 Requires:	syslog-daemon
@@ -53,8 +52,8 @@ should never be removed.
 
 %package	minimal
 Summary:	Minimalistic skeleton package definining a simple %{distribution} system
-Requires:	setup
-Requires:	filesystem
+Requires(pre):	setup
+Requires(pre):	filesystem
 Requires:	sed
 Requires:	utempter
 Requires:	chkconfig
