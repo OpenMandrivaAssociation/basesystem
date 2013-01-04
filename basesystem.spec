@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	6
+Release:	5
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -82,7 +82,6 @@ Requires:	termcap
 Requires:	time
 Requires:	util-linux
 Requires:	which
-Requires:	perl-base
 Requires:	mandriva-release >= 2013.0
 Requires:	bzip2
 Requires:	xz
@@ -117,6 +116,16 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 %files uml
 
 %changelog
+* Fri Jan  4 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
+- drop perl-base dependency
+
+  + Tomasz Pawel Gajc <tpg@mandriva.org>
+    - don't suggests prelink anymore (its useless at least here)
+    - also add prerequires on setup and filesystem
+
+* Thu Dec 20 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2013-4
+- use procps-ng for mdv 201300 and newer
+
 * Thu Dec 13 2012 Bernhard Rosenkränzer <bero@bero.eu> 2013-3
 - Remove rosa-release-common conflict because mandriva-release-common
   provides it
