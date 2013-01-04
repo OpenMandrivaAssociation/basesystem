@@ -7,7 +7,7 @@ Release:	5
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
-Requires:	basesystem-minimal
+Requires(pre):	basesystem-minimal
 %ifnarch %{mips}
 Requires:	bootloader
 %endif
@@ -122,6 +122,7 @@ kernel-uml, using urpmi %{name}-uml  --root ...
   + Tomasz Pawel Gajc <tpg@mandriva.org>
     - don't suggests prelink anymore (its useless at least here)
     - also add prerequires on setup and filesystem
+    - pre require basesystem-minimal
 
 * Thu Dec 20 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2013-4
 - use procps-ng for mdv 201300 and newer
