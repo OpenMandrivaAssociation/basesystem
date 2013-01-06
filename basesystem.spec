@@ -64,7 +64,6 @@ Requires:	grep
 Requires:	gzip
 Requires:	gzip-utils
 Requires:	less
-Requires:	mingetty
 Requires:	net-tools
 Requires:	passwd
 %if %mdvver >= 201300
@@ -117,6 +116,7 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 
 %changelog
 * Fri Jan  4 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
+- drop dependency on mingetty as we're no longer using it by default
 - drop perl-base dependency
 
   + Tomasz Pawel Gajc <tpg@mandriva.org>
