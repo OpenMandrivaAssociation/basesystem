@@ -64,6 +64,7 @@ Requires:	grep
 Requires:	gzip
 Requires:	gzip-utils
 Requires:	less
+Requires:	ncurses
 Requires:	net-tools
 Requires:	passwd
 %if %mdvver >= 201300
@@ -77,7 +78,6 @@ Requires:	rpm
 Requires:	shadow-utils
 Requires:	stat
 Requires:	tar
-Requires:	termcap
 Requires:	time
 Requires:	util-linux
 Requires:	which
@@ -115,7 +115,9 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 %files uml
 
 %changelog
-* Fri Jan  4 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
+* Sun Jan  6 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
+- replace dependency on obsolete termcap with ncurses as most terminals are
+  using terminfo these days
 - drop dependency on mingetty as we're no longer using it by default
 - drop perl-base dependency
 
