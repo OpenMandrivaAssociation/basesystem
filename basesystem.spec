@@ -89,19 +89,19 @@ Suggests:	vim
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
 
-%description minimal
+%description	minimal
 Basesystem defines the components of a basic %{distribution} system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
-%package uml
+%package	uml
 Summary:	Skeleton package definining a simple uml %{distribution} system
 Requires:	basesystem-minimal
 Requires:	dhcp-client-daemon
 Requires:	urpmi
 
-%description uml
+%description	uml
 Basesystem defines the components of a basic %{distribution} system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
@@ -111,8 +111,8 @@ This package can be used to setup a full and working system runned with
 kernel-uml, using urpmi %{name}-uml  --root ...
 
 %files
-%files minimal
-%files uml
+%files		minimal
+%files		uml
 
 %changelog
 * Sun Jan  6 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
