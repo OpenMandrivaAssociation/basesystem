@@ -20,15 +20,7 @@ Requires:	mktemp
 Requires:	mkinitrd
 Requires:	pmac-utils
 %endif
-# (fg) 20001027 ia64 uses eli as a bootloader
-%ifarch ia64
-Requires:	mkinitrd-command
-%endif
-%if %mdvver < 201200
-Requires:	module-init-tools
-%else
 Requires:	kmod
-%endif
 Requires:	vixie-cron
 Requires:	common-licenses
 Requires:	syslog-daemon
@@ -67,11 +59,7 @@ Requires:	less
 Requires:	ncurses
 Requires:	net-tools
 Requires:	passwd
-%if %mdvver >= 201300
 Requires:	procps-ng
-%else
-Requires:	procps
-%endif
 Requires:	psmisc
 Requires:	rootfiles
 Requires:	rpm
@@ -116,6 +104,7 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 
 %changelog
 * Sun Jan  6 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
+- clean out some legacy conditionals
 - replace dependency on obsolete termcap with ncurses as most terminals are
   using terminfo these days
 - drop dependency on mingetty as we're no longer using it by default
