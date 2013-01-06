@@ -120,6 +120,7 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 - drop perl-base dependency
 
   + Tomasz Pawel Gajc <tpg@mandriva.org>
+    - pre require basesystem-minimal
     - don't suggests prelink anymore (its useless at least here)
     - also add prerequires on setup and filesystem
     - pre require basesystem-minimal
