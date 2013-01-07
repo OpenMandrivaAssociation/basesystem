@@ -45,7 +45,7 @@ should never be removed.
 %package	minimal
 Summary:	Minimalistic skeleton package definining a simple %{distribution} system
 Requires(pre):	setup
-Requires(pre):	filesystem
+Requires:	filesystem
 Requires:	sed
 Requires:	utempter
 Requires:	chkconfig
