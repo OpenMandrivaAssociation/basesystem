@@ -69,7 +69,7 @@ Requires:	tar
 Requires:	time
 Requires:	util-linux
 Requires:	which
-Requires:	distro-release >= 2013.0
+Requires:	distro-release-common >= 2013.0
 Requires:	bzip2
 Requires:	xz
 Suggests:	vim
