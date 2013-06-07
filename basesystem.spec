@@ -30,7 +30,7 @@ Requires(post):	systemd-sysvinit
 Requires:	syslog-daemon
 Requires(post):	sysvinit
 # (tpg) this require is in systemd so no need to provide circular dependancy
-#Requires:	initscripts
+Requires:	initscripts
 %endif
 Requires:	kbd
 Requires:	crontabs
