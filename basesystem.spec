@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -29,7 +29,8 @@ Requires(post):	systemd-sysvinit
 # (tpg) systemd by default have enabled syslog implementation
 Requires:	syslog-daemon
 Requires(post):	sysvinit
-Requires:	initscripts
+# (tpg) this require is in systemd so no need to provide circular dependancy
+#Requires:	initscripts
 %endif
 Requires:	kbd
 Requires:	crontabs
