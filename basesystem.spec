@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	10
+Release:	11
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -85,50 +85,6 @@ example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
-%package minimal-ARM
-Summary:	Minimalistic ARM skeleton package definining a simple %{distribution} system
-Provides:	basesystem-minimal
-Requires(pre):	qemu-static-hack
-Requires(pre):	setup
-Requires:	filesystem
-Requires:	sed
-Requires:	utempter
-Requires:	chkconfig
-Requires:	coreutils
-Requires:	etcskel
-Requires:	findutils
-Requires:	grep
-Requires:	gzip
-Requires:	gzip-utils
-Requires:	less
-Requires:	ncurses
-Requires:	net-tools
-Requires:	passwd
-Requires:	procps-ng
-Requires:	psmisc
-Requires:	rootfiles
-Requires:	rpm
-Requires:	shadow-utils
-Requires:	stat
-Requires:	tar
-Requires:	time
-Requires:	util-linux
-Requires:	which
-Requires:	mandriva-release >= 2013.0
-Requires:	bzip2
-Requires:	xz
-Suggests:	vim
-
-# (gb) Add timezone database here for now before moving it to DrakX
-Requires:	timezone
-
-%description minimal-ARM
-Basesystem defines the components of a basic %{distribution} system (for
-example, the package installation order to use during bootstrapping).
-Basesystem should be the first package installed on a system, and it
-should never be removed.
-This package needed only for ABF ARM buildsystem.
-
 %package uml
 Summary:	Skeleton package definining a simple uml %{distribution} system
 Requires:	basesystem-minimal
@@ -146,7 +102,6 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 
 %files
 %files minimal
-%files minimal-ARM
 %files uml
 
 %changelog
