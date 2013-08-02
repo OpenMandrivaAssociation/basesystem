@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	8
+Release:	9
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -87,6 +87,7 @@ should never be removed.
 
 %package minimal-ARM
 Summary:	Minimalistic ARM skeleton package definining a simple %{distribution} system
+Provides:	basesystem-minimal
 Requires(pre):	qemu-static-hack
 Requires(pre):	setup
 Requires:	filesystem
