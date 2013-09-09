@@ -3,12 +3,12 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	11
+Release:	12
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
 Requires(pre):	basesystem-minimal
-%ifnarch %{mips}
+%ifnarch %{mips} %{arm}
 Requires:	bootloader
 %endif
 # (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
