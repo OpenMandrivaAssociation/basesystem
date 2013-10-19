@@ -3,12 +3,12 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	11
+Release:	13
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
 Requires(pre):	basesystem-minimal
-%ifnarch %{mips}
+%ifnarch %{mips} %{arm}
 Requires:	bootloader
 %endif
 # (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
@@ -71,7 +71,7 @@ Requires:	tar
 Requires:	time
 Requires:	util-linux
 Requires:	which
-Requires:	mandriva-release >= 2013.0
+Requires:	distro-release >= 2013.0
 Requires:	bzip2
 Requires:	xz
 Suggests:	vim
@@ -103,113 +103,3 @@ kernel-uml, using urpmi %{name}-uml  --root ...
 %files
 %files minimal
 %files uml
-
-%changelog
-* Sun Jan  6 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-5
-- clean out some legacy conditionals
-- replace dependency on obsolete termcap with ncurses as most terminals are
-  using terminfo these days
-- drop dependency on mingetty as we're no longer using it by default
-- drop perl-base dependency
-
-  + Tomasz Pawel Gajc <tpg@mandriva.org>
-    - pre require basesystem-minimal
-    - don't suggests prelink anymore (its useless at least here)
-    - also add prerequires on setup and filesystem
-    - pre require basesystem-minimal
-
-* Thu Dec 20 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2013-4
-- use procps-ng for mdv 201300 and newer
-
-* Thu Dec 13 2012 Bernhard Rosenkränzer <bero@bero.eu> 2013-3
-- Remove rosa-release-common conflict because mandriva-release-common
-  provides it
-
-* Wed Dec 12 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2013-1
-- add conflict on rosa-release-common to workaround unversioned obsoletes
-  creating issues when upgrading from cooker
-
-* Tue Sep 11 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2012-7
-+ Revision: 816758
-- remove redundant requires on losetup and mount
-- spec file clean
-
-* Sun Sep 09 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2012-6
-+ Revision: 816572
-- add missing summary tags
-- add a conflicts on 'makedev'
-- drop dependency on 'dev' (makedev) as it's deprecated since ages ago
-- move logrotate out of minimal
-- move e2fsprogs out of minimal
-- fix summary-too-long
-- move crontabs out of stable
-- move kbd out of minimal
-- move sysvinit, systemd & initscripts out of minimal
-- move syslog-daemon out of minimal
-- drop dependency on sash
-- move common-licenses out of minimal package
-- move vixie-cron out of minimal package
-- move prelink suggests out of minimal package
-- we don't need kmod without no kernel, so move requires out of minimal package
-- change requires on vim to suggests
-
-* Fri Jul 20 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2012-4
-+ Revision: 810473
-- require kmod instead of module-init-tools on mdv 2012
-
-* Fri Jul 20 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 2012-3
-+ Revision: 810362
-- do not require initscripts when systemd is enabled
-
-* Tue Jun 05 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2012-2
-+ Revision: 802667
-- change dhcp-client dependency to dhcp-client-daemon so that dhcpcd can satisfy
-  it as well
-- change mkinitrd dependency to mkinitrd-command
-- add a suggests on prelink
-- bump version to 2012
-- rebuild to get rid of rpmlib(DistEpoch) blunder and also clean out a bit
-
-* Tue Mar 13 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 2011.0-7
-+ Revision: 784611
-- require new gzip-utils package (contains zcat etc.)
-
-* Sat Dec 03 2011 Paulo Andrade <pcpa@mandriva.com.br> 2011.0-6
-+ Revision: 737536
-- systemd-sysvinit provides sysvinit.
-
-* Sat Dec 03 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 2011.0-5
-+ Revision: 737516
-- remove obsolete and broken dependency on libgcc
-
-  + Tomasz Pawel Gajc <tpg@mandriva.org>
-    - add conflicts on sysvinit
-
-* Sat Nov 19 2011 Tomasz Pawel Gajc <tpg@mandriva.org> 2011.0-3
-+ Revision: 731778
-- use post requires
-
-* Wed Nov 09 2011 Tomasz Pawel Gajc <tpg@mandriva.org> 2011.0-2
-+ Revision: 729489
-- requires systemd-sysvinit instead of sysvinit
-
-* Tue Apr 19 2011 Antoine Ginies <aginies@mandriva.com> 2011.0-1
-+ Revision: 655951
-- bump to 2011 release
-
-* Thu Feb 24 2011 Eugeni Dodonov <eugeni@mandriva.com> 2010.0-4
-+ Revision: 639731
-- Add requires on bzip2 and xz
-
-* Tue Nov 30 2010 Oden Eriksson <oeriksson@mandriva.com> 2010.0-3mdv2011.0
-+ Revision: 603755
-- rebuild
-
-* Tue Mar 16 2010 Oden Eriksson <oeriksson@mandriva.com> 2010.0-2mdv2010.1
-+ Revision: 522188
-- rebuilt for 2010.1
-
-* Fri Sep 25 2009 Olivier Blin <blino@mandriva.org> 2010.0-1mdv2010.0
-+ Revision: 448803
-- bump version to 2010.0
-- do not require bootloader for mips (from Arnaud Patard)
