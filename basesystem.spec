@@ -37,6 +37,7 @@ Requires:	crontabs
 Requires:	e2fsprogs
 Requires:	logrotate
 Conflicts:	makedev <= 4.4-15
+Suggests:	prelink
 
 %description
 Basesystem defines the components of a basic %{distribution} system (for
