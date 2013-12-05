@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	14
+Release:	15
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -50,7 +50,7 @@ Summary:	Minimalistic skeleton package definining a simple %{distribution} syste
 Requires(pre):	setup
 Requires:	filesystem
 Requires:	sed
-Requires:	utempter
+Requires:	libutempter
 Requires:	chkconfig
 Requires:	coreutils
 Requires:	etcskel
