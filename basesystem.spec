@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2013
-Release:	13.1
+Release:	14
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -74,7 +74,7 @@ Requires:	which
 Requires:	distro-release >= 2013.0
 Requires:	bzip2
 Requires:	xz
-Suggests:	vim
+Requires:	vim
 
 # (gb) Add timezone database here for now before moving it to DrakX
 Requires:	timezone
