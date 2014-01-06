@@ -2,8 +2,8 @@
 
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
-Version:	2013
-Release:	13
+Version:	2014
+Release:	1
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -71,7 +71,7 @@ Requires:	tar
 Requires:	time
 Requires:	util-linux
 Requires:	which
-Requires:	distro-release >= 2013.0
+Requires:	distro-release = %{version}
 Requires:	bzip2
 Requires:	xz
 Suggests:	vim
