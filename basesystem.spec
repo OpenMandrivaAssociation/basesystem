@@ -71,7 +71,7 @@ Requires:	tar
 Requires:	time
 Requires:	util-linux
 Requires:	which
-Requires:	distro-release = %{version}
+Requires:	distro-release >= %{version}
 Requires:	bzip2
 Requires:	xz
 Suggests:	vim
