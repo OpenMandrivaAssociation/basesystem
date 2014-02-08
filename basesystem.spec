@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2014
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
