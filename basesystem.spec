@@ -3,7 +3,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2014
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -61,6 +61,7 @@ Requires:	gzip-utils
 Requires:	less
 Requires:	ncurses
 Requires:	net-tools
+Requires:	pam
 Requires:	passwd
 Requires:	procps-ng
 Requires:	psmisc
