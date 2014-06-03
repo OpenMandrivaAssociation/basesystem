@@ -1,5 +1,3 @@
-%define with_systemd 1
-
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2014.1
@@ -23,21 +21,13 @@ Requires:	pmac-utils
 Requires:	kmod
 Requires:	vixie-cron
 Requires:	common-licenses
-%if %{with_systemd}
-Requires(post):	systemd-sysvinit
-%else
-# (tpg) systemd by default have enabled syslog implementation
-Requires:	syslog-daemon
-Requires(post):	sysvinit
-# (tpg) this require is in systemd so no need to provide circular dependancy
-Requires:	initscripts
-%endif
+Requires:	systemd
 Requires:	kbd
 Requires:	crontabs
 Requires:	e2fsprogs
 Requires:	logrotate
 Conflicts:	makedev <= 4.4-15
-Suggests:	prelink
+
 
 %description
 Basesystem defines the components of a basic %{distribution} system (for
@@ -47,8 +37,8 @@ should never be removed.
 
 %package minimal
 Summary:	Minimalistic skeleton package definining a simple %{distribution} system
-Requires(pre):	setup
-Requires:	filesystem
+Requires:	setup
+Requires(pre):	filesystem
 Requires:	sed
 Requires:	libutempter
 Requires:	chkconfig
@@ -68,7 +58,7 @@ Requires:	rootfiles
 Requires:	rpm
 Requires:	shadow-utils
 Requires:	stat
-Requires:	tar
+Requires:	bsdtar
 Requires:	time
 Requires:	util-linux
 Requires:	which
@@ -76,9 +66,6 @@ Requires:	distro-release >= %{version}
 Requires:	bzip2
 Requires:	xz
 Requires:	vim
-
-# (gb) Add timezone database here for now before moving it to DrakX
-Requires:	timezone
 
 %description minimal
 Basesystem defines the components of a basic %{distribution} system (for
