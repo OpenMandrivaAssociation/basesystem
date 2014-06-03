@@ -58,6 +58,7 @@ Requires:	rootfiles
 Requires:	rpm
 Requires:	shadow-utils
 Requires:	stat
+# (tpg) we use bsdtar from libarchive as a replacement for tar
 Requires:	bsdtar
 Requires:	time
 Requires:	util-linux
