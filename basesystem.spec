@@ -59,7 +59,12 @@ Requires:	rpm
 Requires:	shadow-utils
 Requires:	stat
 # (tpg) we use bsdtar from libarchive as a replacement for tar
+# looks like bsdtar fails on ARM
+%ifarch %{i586} %{x86_64}
 Requires:	bsdtar
+%else
+Requires:	tar
+%endif
 Requires:	time
 Requires:	util-linux
 Requires:	which
