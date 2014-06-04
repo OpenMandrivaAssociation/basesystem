@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2014.1
-Release:	1.1
+Release:	1.2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -60,10 +60,10 @@ Requires:	shadow-utils
 Requires:	stat
 # (tpg) we use bsdtar from libarchive as a replacement for tar
 # looks like bsdtar fails on ARM
-%ifarch %{i586} %{x86_64}
-Requires:	bsdtar
-%else
+%ifarch %{arm}
 Requires:	tar
+%else
+Requires:	bsdtar
 %endif
 Requires:	time
 Requires:	util-linux
