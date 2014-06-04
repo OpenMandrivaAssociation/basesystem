@@ -59,12 +59,8 @@ Requires:	rpm
 Requires:	shadow-utils
 Requires:	stat
 # (tpg) we use bsdtar from libarchive as a replacement for tar
-# looks like bsdtar fails on ARM
-%ifarch %{arm}
+# tar points to bsdtar from libarchive, while original tar is renamed to gnutar
 Requires:	tar
-%else
-Requires:	bsdtar
-%endif
 Requires:	time
 Requires:	util-linux
 Requires:	which
@@ -72,6 +68,7 @@ Requires:	distro-release >= %{version}
 Requires:	bzip2
 Requires:	xz
 Requires:	vim
+Requires:	webfetch
 
 %description minimal
 Basesystem defines the components of a basic %{distribution} system (for
