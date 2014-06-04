@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2014.1
-Release:	1.2
+Release:	1.3
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -59,12 +59,9 @@ Requires:	rpm
 Requires:	shadow-utils
 Requires:	stat
 # (tpg) we use bsdtar from libarchive as a replacement for tar
-# looks like bsdtar fails on ARM
-%ifarch %{arm}
-Requires:	tar
-%else
+# originall tar was renamed to gnutar
+# bsdtar froom libarchive provides tar, and bsdtar
 Requires:	bsdtar
-%endif
 Requires:	time
 Requires:	util-linux
 Requires:	which
@@ -72,6 +69,7 @@ Requires:	distro-release >= %{version}
 Requires:	bzip2
 Requires:	xz
 Requires:	vim
+Requires:	wget
 
 %description minimal
 Basesystem defines the components of a basic %{distribution} system (for
