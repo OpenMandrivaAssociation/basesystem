@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.1
+Release:	0.2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
