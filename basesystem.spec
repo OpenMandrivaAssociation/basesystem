@@ -51,6 +51,7 @@ Requires:	gzip-utils
 Requires:	less
 Requires:	ncurses
 Requires:	net-tools
+Requires:	pam
 Requires:	passwd
 Requires:	procps-ng
 Requires:	psmisc
