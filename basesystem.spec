@@ -61,7 +61,11 @@ Requires:	stat
 # (tpg) we use bsdtar from libarchive as a replacement for tar
 # originall tar was renamed to gnutar
 # bsdtar froom libarchive provides tar, and bsdtar
+%if "%{distepoch}" >= "2015.0"
 Requires:	bsdtar
+%else
+Requires:	tar
+%endif
 Requires:	time
 Requires:	util-linux
 Requires:	which
