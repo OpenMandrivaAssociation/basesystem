@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.3
+Release:	0.5
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -27,7 +27,7 @@ Requires:	crontabs
 Requires:	e2fsprogs
 Requires:	logrotate
 Conflicts:	makedev <= 4.4-15
-
+Suggests:	sudo
 
 %description
 Basesystem defines the components of a basic %{distribution} system (for
