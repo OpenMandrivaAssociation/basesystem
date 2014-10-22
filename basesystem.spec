@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.6
+Release:	0.7
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -41,7 +41,7 @@ Requires:	setup
 Requires(pre):	filesystem
 Requires:	sed
 Requires:	libutempter
-Requires:	chkconfig
+Requires:	bash
 Requires:	coreutils
 Requires:	etcskel
 Requires:	findutils
