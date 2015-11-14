@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.9
+Release:	0.10
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -58,7 +58,6 @@ Requires:	psmisc
 Requires:	rootfiles
 Requires:	rpm
 Requires:	shadow-utils
-Requires:	stat
 # (tpg) we use bsdtar from libarchive as a replacement for tar
 # originall tar was renamed to gnutar
 # bsdtar froom libarchive provides tar, and bsdtar
