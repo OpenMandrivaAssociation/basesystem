@@ -1,29 +1,27 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.10
+Release:	0.11
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
 Requires(pre):	basesystem-minimal
-%ifnarch %{mips} %{arm}
+Requires:	etcskel
+Requires:	libutempter
+Requires:	less
+Requires:	net-tools
+Requires:	procps-ng
+Requires:	psmisc
+Requires:	rootfiles
+Requires:	vim
+Requires:	time
+%ifnarch %{arm}
 Requires:	bootloader
 %endif
-# (sb) need pdisk hfsutils ybin mktemp to setup bootloader PPC
-%ifarch ppc
-Requires:	pdisk
-Requires:	hfsutils
-Requires:	ybin
-Requires:	mktemp
-Requires:	mkinitrd
-Requires:	pmac-utils
-%endif
 Requires:	kmod
-Requires:	vixie-cron
 Requires:	common-licenses
 Requires:	systemd
 Requires:	kbd
-Requires:	crontabs
 Requires:	e2fsprogs
 Requires:	logrotate
 Conflicts:	makedev <= 4.4-15
@@ -40,24 +38,17 @@ Summary:	Minimalistic skeleton package definining a simple %{distribution} syste
 Requires:	setup
 Requires(pre):	filesystem
 Requires:	sed
-Requires:	libutempter
 Requires:	bash
 Requires:	coreutils
-Requires:	etcskel
 Requires:	findutils
 Requires:	grep
 Requires:	gzip
 Requires:	gzip-utils
-Requires:	less
 Requires:	ncurses
-Requires:	net-tools
 Requires:	pam
 Requires:	passwd
-Requires:	procps-ng
-Requires:	psmisc
-Requires:	rootfiles
 Requires:	rpm
-Requires:	shadow-utils
+Requires:	shadow
 # (tpg) we use bsdtar from libarchive as a replacement for tar
 # originall tar was renamed to gnutar
 # bsdtar froom libarchive provides tar, and bsdtar
@@ -66,13 +57,11 @@ Requires:	bsdtar
 %else
 Requires:	tar
 %endif
-Requires:	time
 Requires:	util-linux
 Requires:	which
 Requires:	distro-release >= %{version}
 Requires:	bzip2
 Requires:	xz
-Requires:	vim
 Requires:	wget
 
 %description minimal
