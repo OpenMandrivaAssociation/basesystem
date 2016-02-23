@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.11
+Release:	0.12
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -41,6 +41,7 @@ Requires:	sed
 Requires:	bash
 Requires:	coreutils
 Requires:	findutils
+Requires:	hostname
 Requires:	grep
 Requires:	gzip
 Requires:	gzip-utils
