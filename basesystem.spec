@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.12
+Release:	0.13
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -38,6 +38,7 @@ Summary:	Minimalistic skeleton package definining a simple %{distribution} syste
 Requires:	setup
 Requires(pre):	filesystem
 Requires:	sed
+Requires:	rootfiles
 Requires:	bash
 Requires:	coreutils
 Requires:	findutils
