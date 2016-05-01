@@ -1,7 +1,7 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 Version:	2015.0
-Release:	0.13
+Release:	0.14
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -24,6 +24,7 @@ Requires:	systemd
 Requires:	kbd
 Requires:	e2fsprogs
 Requires:	logrotate
+Requires:	iputils
 Conflicts:	makedev <= 4.4-15
 Suggests:	sudo
 
