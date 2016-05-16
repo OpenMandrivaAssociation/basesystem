@@ -1,7 +1,9 @@
 Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
-Version:	2015.0
-Release:	0.14
+# Ugly, but needed to allow for 2015.0 -> 3.0 transition
+Epoch:		1
+Version:	3.0
+Release:	0.1
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
