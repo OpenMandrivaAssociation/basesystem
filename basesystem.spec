@@ -29,7 +29,7 @@ Requires:	systemd-console >= 235-9
 Requires:	systemd-doc >= 235-9
 Requires:	systemd-hwdb >= 235-9
 Requires:	systemd-locale >= 235-9
-Requires:	systemd-pokit >= 235-9
+Requires:	systemd-polkit >= 235-9
 Requires:	kbd
 Requires:	e2fsprogs
 Requires:	logrotate
