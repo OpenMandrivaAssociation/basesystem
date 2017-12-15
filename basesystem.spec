@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -36,7 +36,6 @@ Requires:	logrotate
 Requires:	iputils
 Requires:	pam
 Requires:	passwd
-Requires:	shadow
 Conflicts:	makedev <= 4.4-15
 Suggests:	sudo
 
