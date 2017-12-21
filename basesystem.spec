@@ -26,6 +26,7 @@ Requires:	systemd
 Requires:	systemd-boot >= 235-9
 Requires:	systemd-coredump >= 235-9
 Requires:	systemd-console >= 235-9
+Suggests:	systemd-doc >= 235-9
 Requires:	systemd-hwdb >= 235-9
 Requires:	systemd-locale >= 235-9
 Requires:	systemd-polkit >= 235-9
