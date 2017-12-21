@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -26,7 +26,6 @@ Requires:	systemd
 Requires:	systemd-boot >= 235-9
 Requires:	systemd-coredump >= 235-9
 Requires:	systemd-console >= 235-9
-Requires:	systemd-doc >= 235-9
 Requires:	systemd-hwdb >= 235-9
 Requires:	systemd-locale >= 235-9
 Requires:	systemd-polkit >= 235-9
