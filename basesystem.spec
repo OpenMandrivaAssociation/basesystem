@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	0.1
+Release:	3
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -23,10 +23,19 @@ Requires:	bootloader
 Requires:	kmod
 Requires:	common-licenses
 Requires:	systemd
+Requires:	systemd-boot >= 235-9
+Requires:	systemd-coredump >= 235-9
+Requires:	systemd-console >= 235-9
+Suggests:	systemd-doc >= 235-9
+Requires:	systemd-hwdb >= 235-9
+Requires:	systemd-locale >= 235-9
+Requires:	systemd-polkit >= 235-9
 Requires:	kbd
 Requires:	e2fsprogs
 Requires:	logrotate
 Requires:	iputils
+Requires:	pam
+Requires:	passwd
 Conflicts:	makedev <= 4.4-15
 Suggests:	sudo
 
@@ -50,10 +59,7 @@ Requires:	grep
 Requires:	gzip
 Requires:	gzip-utils
 Requires:	ncurses
-Requires:	pam
-Requires:	passwd
 Requires:	rpm
-Requires:	shadow
 # (tpg) we use bsdtar from libarchive as a replacement for tar
 # originall tar was renamed to gnutar
 # bsdtar froom libarchive provides tar, and bsdtar
