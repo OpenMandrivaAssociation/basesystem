@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -26,7 +26,7 @@ Requires:	systemd
 Requires:	systemd-boot >= 235-9
 Requires:	systemd-coredump >= 235-9
 Requires:	systemd-console >= 235-9
-Suggests:	systemd-documentation >= 235-9
+Recommends:	systemd-documentation >= 235-9
 Requires:	systemd-hwdb >= 235-9
 Requires:	systemd-locale >= 235-9
 Requires:	systemd-polkit >= 235-9
@@ -37,7 +37,7 @@ Requires:	iputils
 Requires:	pam
 Requires:	passwd
 Conflicts:	makedev <= 4.4-15
-Suggests:	sudo
+Recommends:	sudo
 
 %description
 Basesystem defines the components of a basic %{distribution} system (for
@@ -85,7 +85,7 @@ should never be removed.
 Summary:	Skeleton package definining a simple uml %{distribution} system
 Requires:	basesystem-minimal
 Requires:	dhcp-client-daemon
-Requires:	urpmi
+Requires:	dnf
 
 %description uml
 Basesystem defines the components of a basic %{distribution} system (for
@@ -94,7 +94,7 @@ Basesystem should be the first package installed on a system, and it
 should never be removed.
 
 This package can be used to setup a full and working system runned with
-kernel-uml, using urpmi %{name}-uml  --root ...
+kernel-uml, using dnf %{name}-uml  --root ...
 
 %files
 %files minimal
