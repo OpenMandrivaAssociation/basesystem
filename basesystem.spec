@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -35,6 +35,7 @@ Requires:	e2fsprogs
 Requires:	logrotate
 Requires:	iputils
 Requires:	pam
+Requires:	shadow
 Requires:	passwd
 Conflicts:	makedev <= 4.4-15
 Recommends:	sudo
@@ -60,14 +61,7 @@ Requires:	gzip
 Requires:	gzip-utils
 Requires:	ncurses
 Requires:	rpm
-# (tpg) we use bsdtar from libarchive as a replacement for tar
-# originall tar was renamed to gnutar
-# bsdtar froom libarchive provides tar, and bsdtar
-%if "%{distepoch}" >= "2015.0"
 Requires:	bsdtar
-%else
-Requires:	tar
-%endif
 Requires:	util-linux
 Requires:	which
 Requires:	distro-release >= %{version}
