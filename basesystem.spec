@@ -3,12 +3,14 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
 Requires(pre):	basesystem-minimal
 Requires:	etcskel
+Requires:	gnupg
+Requires:	pinentry
 Requires:	libutempter
 Requires:	less
 Requires:	net-tools
