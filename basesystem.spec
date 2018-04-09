@@ -25,6 +25,7 @@ Requires:	bootloader
 Requires:	kmod
 Requires:	common-licenses
 Requires:	systemd
+Requires:	systemd-analyze >= 238-4
 Requires:	systemd-boot >= 235-9
 Requires:	systemd-coredump >= 235-9
 Requires:	systemd-console >= 235-9
