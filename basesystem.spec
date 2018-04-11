@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -23,6 +23,7 @@ Requires:	bootloader
 Requires:	kmod
 Requires:	common-licenses
 Requires:	systemd
+Requires:	systemd-analyze >= 238-4
 Requires:	systemd-boot >= 235-9
 Requires:	systemd-coredump >= 235-9
 Requires:	systemd-console >= 235-9
