@@ -3,13 +3,15 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	3
-Release:	8
+Release:	9
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
 Requires(pre):	basesystem-minimal
 Requires:	etcskel
 Requires:	gnupg
+Requires:	gzip-utils
+Requires:	hostname
 Requires:	pinentry
 Requires:	libutempter
 Requires:	less
@@ -59,10 +61,8 @@ Requires:	rootfiles
 Requires:	bash
 Requires:	coreutils
 Requires:	findutils
-Requires:	hostname
 Requires:	grep
 Requires:	gzip
-Requires:	gzip-utils
 Requires:	ncurses
 Requires:	rpm
 Requires:	bsdtar
