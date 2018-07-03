@@ -2,7 +2,7 @@ Summary:	Skeleton package which defines a simple %{distribution} system
 Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
-Version:	3
+Version:	4
 Release:	10
 License:	GPLv2+
 Group:		System/Base
