@@ -20,7 +20,7 @@ Requires:	net-tools
 Requires:	procps-ng
 Requires:	psmisc
 Requires:	rootfiles
-Requires:	vim
+Requires:	vim-minimal
 Requires:	time
 %ifnarch %{arm}
 Requires:	bootloader
