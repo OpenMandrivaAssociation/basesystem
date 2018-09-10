@@ -22,7 +22,7 @@ Requires:	psmisc
 Requires:	rootfiles
 Requires:	vim-minimal
 Requires:	time
-%ifnarch %{arm}
+%ifnarch %{armx}
 Requires:	bootloader
 %endif
 Requires:	kmod
