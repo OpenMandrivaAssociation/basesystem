@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	14
+Release:	15
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -25,18 +25,16 @@ Requires:	time
 %ifnarch %{armx}
 Requires:	bootloader
 %endif
-Requires:	kmod
 Requires:	common-licenses
 Requires:	systemd
 Requires:	systemd-analyze >= 238-4
 Requires:	systemd-coredump >= 235-9
 Requires:	systemd-console >= 235-9
-Recommends:	systemd-documentation >= 235-9
+Suggests:	systemd-documentation >= 235-9
 Requires:	systemd-hwdb >= 235-9
 Requires:	systemd-locale >= 235-9
 Requires:	systemd-polkit >= 235-9
 Requires:	systemd-cryptsetup >= 238-3
-Requires:	kbd
 Requires:	e2fsprogs
 Requires:	logrotate
 Requires:	iputils
