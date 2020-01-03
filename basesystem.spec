@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	16
+Release:	17
 License:	GPLv2+
 Group:		System/Base
 Requires:	kernel
@@ -77,6 +77,20 @@ example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
+%package build
+Summary:	The skeleton package which defines a simple system for package builds
+Group:		System/Base
+Requires:	basesystem-minimal rpmlint-distro-policy
+Requires:	openmandriva-repos-pkgprefs dwz
+Requires:	locales locales-en task-devel
+Requires:	gnupg shadow wget
+
+%description build
+Basesystem defines the components of a basic OpenMandriva Linux build system 
+for the package installation order to use during bootstrapping.
+
+This package can be used to setup a full and working system for package builds
+
 %package uml
 Summary:	Skeleton package definining a simple uml %{distribution} system
 Requires:	basesystem-minimal
@@ -95,3 +109,4 @@ kernel-uml, using dnf %{name}-uml  --root ...
 %files
 %files minimal
 %files uml
+%files build
