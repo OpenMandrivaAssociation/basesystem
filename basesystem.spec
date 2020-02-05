@@ -6,7 +6,10 @@ Version:	4
 Release:	17
 License:	GPLv2+
 Group:		System/Base
+%ifnarch %{riscv}
+# FIXME Remove ifnarch... once we have a generic RISC-V kernel
 Requires:	kernel
+%endif
 Requires(pre):	basesystem-minimal
 Requires:	etcskel
 Requires:	findutils
@@ -22,7 +25,7 @@ Requires:	psmisc
 Requires:	rootfiles
 Requires:	vim-minimal
 Requires:	time
-%ifnarch %{armx}
+%ifnarch %{armx} %{riscv}
 Requires:	bootloader
 %endif
 Requires:	common-licenses
