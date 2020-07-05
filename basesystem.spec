@@ -71,6 +71,7 @@ Requires:	util-linux
 Requires:	which
 Requires:	distro-release >= %{version}
 Requires:	bzip2
+Requires:	unzip xz gzip-utils zstd
 Requires:	xz
 Requires:	wget
 
@@ -87,6 +88,7 @@ Requires:	basesystem-minimal rpmlint-distro-policy
 Requires:	openmandriva-repos-pkgprefs dwz
 Requires:	locales locales-en task-devel
 Requires:	gnupg shadow wget
+Requires:	glibc-static-devel glibc-devel
 
 %description build
 Basesystem defines the components of a basic OpenMandriva Linux build system 
