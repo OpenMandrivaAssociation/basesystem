@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	18
+Release:	19
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -14,7 +14,6 @@ Requires(pre):	basesystem-minimal
 Requires:	etcskel
 Requires:	findutils
 Requires:	gnupg
-Requires:	gzip-utils
 Requires:	hostname
 Requires:	pinentry
 Requires:	libutempter
@@ -64,14 +63,15 @@ Requires:	bash
 Requires:	coreutils
 Requires:	grep
 Requires:	gzip
-Requires:	ncurses
 Requires:	rpm
 Requires:	bsdtar
 Requires:	util-linux
 Requires:	which
 Requires:	distro-release >= %{version}
 Requires:	bzip2
-Requires:	unzip xz gzip-utils zstd
+Requires:	unzip
+Requires:	gzip-utils
+Requires:	zstd
 Requires:	xz
 Requires:	wget
 
@@ -84,11 +84,18 @@ should never be removed.
 %package build
 Summary:	The skeleton package which defines a simple system for package builds
 Group:		System/Base
-Requires:	basesystem-minimal rpmlint-distro-policy
-Requires:	openmandriva-repos-pkgprefs dwz
-Requires:	locales locales-en task-devel
-Requires:	gnupg shadow wget
-Requires:	glibc-static-devel glibc-devel
+Requires:	basesystem-minimal
+Requires:	distro-release-rpmlint-policy
+Requires:	distro-release-repos-pkgprefs
+Requires:	dwz
+Requires:	locales
+Requires:	locales-en
+Requires:	task-devel
+Requires:	gnupg
+Requires:	shadow
+Requires:	wget
+Requires:	glibc-static-devel
+Requires:	glibc-devel
 
 %description build
 Basesystem defines the components of a basic OpenMandriva Linux build system 
