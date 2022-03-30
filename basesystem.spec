@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	20
+Release:	21
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -59,7 +59,7 @@ Requires:	setup
 Requires(pre):	filesystem
 Requires:	sed
 Requires:	rootfiles
-Requires:	bash
+Requires:	/bin/sh
 Requires:	coreutils
 Requires:	grep
 Requires:	gzip
