@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	21
+Release:	22
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -12,7 +12,6 @@ Requires:	kernel
 %endif
 Requires(pre):	basesystem-minimal
 Requires:	etcskel
-Requires:	findutils
 Requires:	gnupg
 Requires:	hostname
 Requires:	pinentry
@@ -21,7 +20,6 @@ Requires:	less
 Requires:	net-tools
 Requires:	procps-ng
 Requires:	psmisc
-Requires:	rootfiles
 Requires:	vim-minimal
 Requires:	time
 %ifnarch %{armx} %{riscv}
@@ -44,8 +42,10 @@ Requires:	pam
 Requires:	pam-cracklib
 Requires:	shadow
 Requires:	passwd
+Requires:	wget
 Conflicts:	makedev <= 4.4-15
 Recommends:	sudo
+Recommends:	dnf
 
 %description
 Basesystem defines the components of a basic %{distribution} system (for
@@ -61,6 +61,7 @@ Requires:	sed
 Requires:	rootfiles
 Requires:	/bin/sh
 Requires:	coreutils
+Requires:	findutils
 Requires:	grep
 Requires:	gzip
 Requires:	rpm
@@ -73,7 +74,6 @@ Requires:	unzip
 Requires:	gzip-utils
 Requires:	zstd
 Requires:	xz
-Requires:	wget
 
 %description minimal
 Basesystem defines the components of a basic %{distribution} system (for
@@ -84,18 +84,26 @@ should never be removed.
 %package build
 Summary:	The skeleton package which defines a simple system for package builds
 Group:		System/Base
+Obsoletes:	task-devel < 2015.0-1
+Provides:	task-devel = 2015.0-1
 Requires:	basesystem-minimal
 Requires:	distro-release-rpmlint-policy
 Requires:	distro-release-repos-pkgprefs
 Requires:	dwz
 Requires:	locales
 Requires:	locales-en
-Requires:	task-devel
 Requires:	gnupg
 Requires:	shadow
-Requires:	wget
-Requires:	glibc-static-devel
+Requires:	make
 Requires:	glibc-devel
+Requires:	binutils
+Requires:	gcc
+Requires:	gcc-c++
+Requires:	llvm-polly
+Requires:	clang
+Requires:	%mklibname -d stdc++
+Requires:	rpm-build
+Requires:	python >= 3.0
 
 %description build
 Basesystem defines the components of a basic OpenMandriva Linux build system 
@@ -103,22 +111,22 @@ for the package installation order to use during bootstrapping.
 
 This package can be used to setup a full and working system for package builds
 
-%package uml
+%package container
 Summary:	Skeleton package definining a simple uml %{distribution} system
+Obsoletes:	basesystem-uml < 1:4-22
 Requires:	basesystem-minimal
-Requires:	dhcp-client-daemon
-Requires:	dnf
+Recommends:	microdnf
 
-%description uml
+%description container
 Basesystem defines the components of a basic %{distribution} system (for
 example, the package installation order to use during bootstrapping).
 Basesystem should be the first package installed on a system, and it
 should never be removed.
 
-This package can be used to setup a full and working system runned with
-kernel-uml, using dnf %{name}-uml  --root ...
+This package can be used to setup a full and working system running
+in a container.
 
 %files
 %files minimal
-%files uml
+%files container
 %files build
