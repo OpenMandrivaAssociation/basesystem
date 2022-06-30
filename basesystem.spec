@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	22
+Release:	23
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -63,15 +63,14 @@ Requires:	/bin/sh
 Requires:	coreutils
 Requires:	findutils
 Requires:	grep
-Requires:	gzip
+Requires:	pigz
 Requires:	rpm
 Requires:	bsdtar
 Requires:	util-linux
 Requires:	which
 Requires:	distro-release >= %{version}
-Requires:	bzip2
+Requires:	pbzip2
 Requires:	unzip
-Requires:	gzip-utils
 Requires:	zstd
 Requires:	xz
 
