@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	23
+Release:	24
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -35,6 +35,7 @@ Requires:	systemd-hwdb >= 235-9
 Requires:	systemd-locale >= 235-9
 Requires:	systemd-polkit >= 235-9
 Requires:	systemd-cryptsetup >= 238-3
+Requires:	systemd-rpm-macros
 Requires:	e2fsprogs
 Requires:	logrotate
 Requires:	iputils
@@ -86,23 +87,54 @@ Group:		System/Base
 Obsoletes:	task-devel < 2015.0-1
 Provides:	task-devel = 2015.0-1
 Requires:	basesystem-minimal
-Requires:	distro-release-rpmlint-policy
-Requires:	distro-release-repos-pkgprefs
-Requires:	dwz
-Requires:	locales
-Requires:	locales-en
-Requires:	gnupg
-Requires:	shadow
-Requires:	make
-Requires:	glibc-devel
+# (tpg) keep all the configuration for RPM build in distro-release
+Requires:	distro-release-rpm-setup
+%ifarch %{riscv}
+Requires:	atomic-devel
+%endif
+Requires:	autoconf
+Requires:	automake
 Requires:	binutils
+Requires:	clang
+Requires:	coreutils
+Requires:	cpio
+Requires:	debugedit
+Requires:	diffutils
+Requires:	distro-release-repos-pkgprefs
+Requires:	distro-release-rpmlint-policy
+Requires:	dwz
+Requires:	elfutils >= 0.167-2
+Requires:	file
+Requires:	gawk
 Requires:	gcc
 Requires:	gcc-c++
+Requires:	glibc-devel
+Requires:	gnupg
+Requires:	go-srpm-macros
+Requires:	libtool-base
 Requires:	llvm-polly
-Requires:	clang
+Requires:	locales
+Requires:	locales-en
+Requires:	make
 Requires:	%mklibname -d stdc++
-Requires:	rpm-build
+Requires:	patch
+Requires:	pbzip2
+Requires:	pigz
+Requires:	pkgconf
 Requires:	python >= 3.0
+Requires:	python-packaging
+Requires:	python-pkg-resources
+Requires:	rpm-build
+Requires:	rpmlint
+Requires:	rust-srpm-macros
+Requires:	shadow
+Requires:	spec-helper >= 0.31.12
+Requires:	systemd-rpm-macros
+Requires:	tar >= 3.3.2
+Requires:	unzip
+Requires:	/usr/bin/gdb-add-index
+Requires:	xz
+Requires:	zstd
 
 %description build
 Basesystem defines the components of a basic OpenMandriva Linux build system 
