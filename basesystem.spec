@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	24
+Release:	25
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -36,6 +36,7 @@ Requires:	systemd-locale >= 235-9
 Requires:	systemd-polkit >= 235-9
 Requires:	systemd-cryptsetup >= 238-3
 Requires:	systemd-rpm-macros
+Requires:	distro-release-rpm-setup
 Requires:	e2fsprogs
 Requires:	logrotate
 Requires:	iputils
@@ -88,7 +89,7 @@ Obsoletes:	task-devel < 2015.0-1
 Provides:	task-devel = 2015.0-1
 Requires:	basesystem-minimal
 # (tpg) keep all the configuration for RPM build in distro-release
-Requires:	distro-release-rpm-setup
+Requires:	distro-release-rpm-setup-build
 %ifarch %{riscv}
 Requires:	atomic-devel
 %endif
