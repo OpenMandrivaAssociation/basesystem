@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	25
+Release:	26
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -20,7 +20,7 @@ Requires:	less
 Requires:	net-tools
 Requires:	procps-ng
 Requires:	psmisc
-Requires:	vim-minimal
+Requires:	texteditor
 Requires:	time
 %ifnarch %{armx} %{riscv}
 Requires:	bootloader
