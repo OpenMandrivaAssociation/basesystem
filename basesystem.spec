@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	26
+Release:	27
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -97,6 +97,7 @@ Requires:	autoconf
 Requires:	automake
 Requires:	binutils
 Requires:	clang
+Requires:	cmake
 Requires:	coreutils
 Requires:	cpio
 Requires:	debugedit
@@ -117,6 +118,7 @@ Requires:	llvm-polly
 Requires:	locales
 Requires:	locales-en
 Requires:	make
+Requires:	meson
 Requires:	%mklibname -d stdc++
 Requires:	patch
 Requires:	pbzip2
