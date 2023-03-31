@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	28
+Release:	29
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
