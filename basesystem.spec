@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	29
+Release:	30
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -48,7 +48,7 @@ Requires(meta):	wget
 Requires(meta):	util-linux
 Conflicts:	makedev <= 4.4-15
 Recommends:	sudo
-Recommends:	dnf
+Recommends:	dnf5
 
 %description
 Basesystem defines the components of a basic %{distribution} system (for
