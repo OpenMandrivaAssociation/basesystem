@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	30
+Release:	31
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -47,6 +47,8 @@ Requires(meta):	shadow
 Requires(meta):	passwd
 Requires(meta):	wget
 Requires(meta):	util-linux
+Requires(meta):	which
+Requires(meta):	rootfiles
 Conflicts:	makedev <= 4.4-15
 Recommends:	sudo
 Recommends:	dnf
@@ -62,7 +64,6 @@ Summary:	Minimalistic skeleton package definining a simple %{distribution} syste
 Requires(meta):	setup
 Requires(pre):	filesystem
 Requires(meta):	sed
-Requires(meta):	rootfiles
 Requires(meta):	/bin/sh
 Requires(meta):	coreutils
 Requires(meta):	findutils
@@ -71,12 +72,12 @@ Requires(meta):	pigz
 Requires(meta):	rpm
 Requires(meta):	bsdtar
 Requires(meta):	util-linux-core
-Requires(meta):	which
 Requires(meta):	distro-release >= %{version}
 Requires(meta):	pbzip2
 Requires(meta):	unzip
 Requires(meta):	zstd
 Requires(meta):	xz
+Requires(meta):	shadow
 
 %description minimal
 Basesystem defines the components of a basic %{distribution} system (for
