@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	31
+Release:	32
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -96,11 +96,6 @@ Requires(meta):	distro-release-rpm-setup-build
 %ifarch %{riscv}
 Requires(meta):	atomic-devel
 %endif
-Requires(meta):	autoconf
-Requires(meta):	automake
-Requires(meta):	binutils
-Requires(meta):	clang
-Requires(meta):	cmake
 Requires(meta):	coreutils
 Requires(meta):	cpio
 Requires(meta):	debugedit
@@ -111,28 +106,21 @@ Requires(meta):	dwz
 Requires(meta):	elfutils >= 0.167-2
 Requires(meta):	file
 Requires(meta):	gawk
+Requires(meta):	binutils
+Requires(meta):	clang
 Requires(meta):	gcc
 Requires(meta):	gcc-c++
+Requires(meta):	%mklibname -d stdc++
 Requires(meta):	glibc-devel
 Requires(meta):	gnupg
-Requires(meta):	go-srpm-macros
-Requires(meta):	libtool-base
-Requires(meta):	llvm-polly
 Requires(meta):	locales
 Requires(meta):	locales-en
-Requires(meta):	make
-Requires(meta):	meson
-Requires(meta):	%mklibname -d stdc++
 Requires(meta):	patch
 Requires(meta):	pbzip2
 Requires(meta):	pigz
 Requires(meta):	pkgconf
-Requires(meta):	python >= 3.0
-Requires(meta):	python-packaging
-Requires(meta):	python-pkg-resources
 Requires(meta):	rpm-build
 Requires(meta):	rpmlint
-Requires(meta):	rust-srpm-macros
 Requires(meta):	spec-helper >= 0.31.12
 Requires(meta):	systemd-rpm-macros
 Requires(meta):	tar >= 3.3.2
