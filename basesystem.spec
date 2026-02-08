@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	33
+Release:	34
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -96,6 +96,7 @@ Requires(meta):	distro-release-rpm-setup-build
 %ifarch %{riscv}
 Requires(meta):	atomic-devel
 %endif
+Requires(meta):	car
 Requires(meta):	coreutils
 Requires(meta):	cpio
 Requires(meta):	debugedit
