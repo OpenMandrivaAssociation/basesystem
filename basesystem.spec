@@ -3,7 +3,7 @@ Name:		basesystem
 # Ugly, but needed to allow for 2015.0 -> 3.0 transition
 Epoch:		1
 Version:	4
-Release:	34
+Release:	35
 License:	GPLv2+
 Group:		System/Base
 %ifnarch %{riscv}
@@ -129,10 +129,6 @@ Requires(meta):	unzip
 Requires(meta):	/usr/bin/gdb-add-index
 Requires(meta):	xz
 Requires(meta):	zstd
-# Temporary to get more 3.14 rebuilds going
-BuildRequires:	python
-Requires:	python%{pyver}dist(setuptools)
-Requires:	python%{pyver}dist(pip)
 
 %description build
 Basesystem defines the components of a basic OpenMandriva Linux build system 
